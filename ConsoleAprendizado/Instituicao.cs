@@ -8,8 +8,8 @@ namespace ConsoleAprendizado
     {
         public String Nome { get; set; }
         public String NomeFantasia { get; set; }    
-        public int CNPJ { get; set; }   
-        public int Telefone { get; set; }
+        public String CNPJ { get; set; }   
+        public String Telefone { get; set; }
         public String Endereco { get; set; }          
         public DateTime AnoDeFundacao { get; set; } 
         public String Presidente { get; set; }    

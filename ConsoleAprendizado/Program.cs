@@ -14,10 +14,10 @@ Console.WriteLine("Informe o nome fantasia da instituição");
 instituicao.NomeFantasia = Console.ReadLine();
 
 Console.WriteLine("Informe o CNPJ da instituição");
-instituicao.CNPJ = int.Parse(Console.ReadLine());
+instituicao.CNPJ = Console.ReadLine();
 
 Console.WriteLine("Informe o telefone da instituição");
-instituicao.Telefone = int.Parse(Console.ReadLine());
+instituicao.Telefone = Console.ReadLine();
 
 Console.WriteLine("Informe o endereço da instituição");
 instituicao.Endereco = Console.ReadLine();
