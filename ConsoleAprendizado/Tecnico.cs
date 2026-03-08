@@ -10,8 +10,8 @@ namespace ConsoleApredizado
         public DateTime DataNascimento { get; set;}
         public int Idade { get; set;}
         public String Endereco { get; set;}
-        public int CPF { get; set;}
-        public int Telefone { get; set; }
+        public String CPF { get; set;}
+        public String Telefone { get; set; }
         public Boolean PossuiComissaoTecnica { get; set;}
         public DateTime TempoDeContrato { get; set;}
         public float Salario { get; set;}

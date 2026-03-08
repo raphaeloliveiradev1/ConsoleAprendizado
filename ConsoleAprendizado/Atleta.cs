@@ -8,13 +8,14 @@ namespace ConsoleApredizado
     {
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
+        public int telefone { get; set; }
+        public Boolean Sexo { get; set; }
         public String Endereco { get; set; }
         public String Base { get; set; }
         public float PercentualMassa { get; set; }
         public float PesoAtual { get; set; }
         public String AreaAtuacao { get; set; }       
-        public Boolean  EhBatedorDePenaltis { get; set; }
+        public Boolean EhBatedorDePenaltis { get; set; }
         public Boolean CanhatoOuDestro { get; set; }
-
     }
 }

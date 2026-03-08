@@ -1,51 +1,129 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApredizado;
+using ConsoleAprendizado;
+
+Console.WriteLine("\n-----------------------------\n");
+Console.WriteLine("Vamos cadastrar A instituição");
+Console.WriteLine("\n-----------------------------\n");
+
+Instituicao instituicao = new Instituicao();
+Console.WriteLine("Informe o nome da instituição");
+instituicao.Nome = Console.ReadLine();
+
+Console.WriteLine("Informe o nome fantasia da instituição");
+instituicao.NomeFantasia = Console.ReadLine();
+
+Console.WriteLine("Informe o CNPJ da instituição");
+instituicao.CNPJ = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o telefone da instituição");
+instituicao.Telefone = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o endereço da instituição");
+instituicao.Endereco = Console.ReadLine();
+
+Console.WriteLine("Informe o ano de fundação da instituição (MM/dd/yyyy):");
+instituicao.AnoDeFundacao = DateTime.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o presidente da instituição");
+instituicao.Presidente = Console.ReadLine();
+
+Console.WriteLine("\n-----------------------------\n");
+Console.WriteLine("Vamos cadastrar um Atleta");
+Console.WriteLine("\n-----------------------------\n");
 
 Atleta primeiroAtleta = new Atleta();
-primeiroAtleta.Nome = "Cristiano Ronaldo";
-primeiroAtleta.DataNascimento = new DateTime(1990, 10, 28);
-primeiroAtleta.Endereco = "Rua dos Atletas, 123";
-primeiroAtleta.Base = "Futebol";
-primeiroAtleta.PercentualMassa = 15.5f;
-primeiroAtleta.PesoAtual = 85.0f;
-primeiroAtleta.AreaAtuacao = "Atacante";
-primeiroAtleta.EhBatedorDePenaltis = true;
-primeiroAtleta.CanhatoOuDestro = true;
+Console.WriteLine("Informe o nome do atleta:");
+primeiroAtleta.Nome = Console.ReadLine();
 
-Atleta segundoAtleta = new Atleta();
-segundoAtleta.Nome = "Lionel Messi";
-segundoAtleta.DataNascimento = new DateTime(1987, 6, 24);
-segundoAtleta.Endereco = "Avenida dos Craques, 456";
-segundoAtleta.Base = "Futebol";
-segundoAtleta.PercentualMassa = 12.3f;
-segundoAtleta.PesoAtual = 72.0f;
-segundoAtleta.AreaAtuacao = "Meio-campista";
-segundoAtleta.EhBatedorDePenaltis = false;
-segundoAtleta.CanhatoOuDestro = false;
+Console.WriteLine("Informe a data de nascimento do atleta (MM/dd/yyyy):");
+primeiroAtleta.DataNascimento = DateTime.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o Endereço");
+primeiroAtleta.Endereco = Console.ReadLine();
+
+Console.WriteLine("Inforeme a base do atleta");
+primeiroAtleta.Base = Console.ReadLine();
+
+Console.WriteLine("Infomer o percentual de massa do atleta");
+primeiroAtleta.PercentualMassa = float.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o peso atual do atleta");
+primeiroAtleta.PesoAtual = float.Parse(Console.ReadLine());
+
+Console.WriteLine("informe a área de atuação do atleta");
+primeiroAtleta.AreaAtuacao = Console.ReadLine();
+
+Console.WriteLine("Informe se o atleta é batedor de pênaltis (True/False)");
+primeiroAtleta.EhBatedorDePenaltis = Boolean.Parse(Console.ReadLine());
+
+Console.WriteLine("informe se o atleta é canhoto ou destro (True/False)");
+primeiroAtleta.CanhatoOuDestro = Boolean.Parse(Console.ReadLine());
+
+Console.WriteLine("\n-----------------------------\n");
+Console.WriteLine("Vamos cadastrar um Técnico");
+Console.WriteLine("\n-----------------------------\n");
 
 Tecnico tecnico = new Tecnico();
 Console.WriteLine("infome o nome do tecnico");
 tecnico.Nome = Console.ReadLine();
-Console.WriteLine(tecnico.Nome);
-Console.WriteLine(tecnico);
 
-Console.WriteLine($"Nome: {primeiroAtleta.Nome}");
-Console.WriteLine($"Data de Nascimento: {primeiroAtleta.DataNascimento.ToShortDateString()}"); 
-Console.WriteLine($"Endereço: {primeiroAtleta.Endereco}");
-Console.WriteLine($"Base: {primeiroAtleta.Base}");
-Console.WriteLine($"Percentual de Massa: {primeiroAtleta.PercentualMassa}%");
-Console.WriteLine($"Peso Atual: {primeiroAtleta.PesoAtual} kg");
-Console.WriteLine($"Área de Atuação: {primeiroAtleta.AreaAtuacao}");
-Console.WriteLine($"É Batedor de Pênaltis: {(primeiroAtleta.EhBatedorDePenaltis ? "Sim" : "Não")}");
-Console.WriteLine($"Canhoto ou Destros: {(primeiroAtleta.CanhatoOuDestro ? "Destro" : "Canhoto")}");   
+Console.WriteLine("Informe a data de nascimento do técnico (MM/dd/yyyy):");
+tecnico.DataNascimento = DateTime.Parse(Console.ReadLine());
+
+Console.WriteLine("informe a idade do técnico");
+tecnico.Idade = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o endereço do técnico");
+tecnico.Endereco = Console.ReadLine();
+
+Console.WriteLine("Informe o CPF do técnico");
+tecnico.CPF = Console.ReadLine();
+
+Console.WriteLine("Informe o telefone do técnico");
+tecnico.Telefone = Console.ReadLine();
+
+Console.WriteLine("Informe se o técnico possui comissão técnica (True/False)");
+tecnico.PossuiComissaoTecnica = Boolean.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o tempo de contrato do técnico (MM/dd/yyyy):");
+tecnico.TempoDeContrato = DateTime.Parse(Console.ReadLine());   
+
+Console.WriteLine("Informe o salário do técnico");
+tecnico.Salario = float.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o perfil técnico do técnico");
+tecnico.PerfilTecnico = Console.ReadLine();
+
+Console.WriteLine("Informe o último clube do técnico");
+tecnico.UltimoClube = Console.ReadLine();
+
 Console.WriteLine("\n-----------------------------\n");
-Console.WriteLine($"Nome: {segundoAtleta.Nome}");
-Console.WriteLine($"Data de Nascimento: {segundoAtleta.DataNascimento.ToShortDateString()}");
-Console.WriteLine($"Endereço: {segundoAtleta.Endereco}");
-Console.WriteLine($"Base: {segundoAtleta.Base}");
-Console.WriteLine($"Percentual de Massa: {segundoAtleta.PercentualMassa}%");
-Console.WriteLine($"Peso Atual: {segundoAtleta.PesoAtual} kg");
-Console.WriteLine($"Área de Atuação: {segundoAtleta.AreaAtuacao}");
-Console.WriteLine($"É Batedor de Pênaltis: {(segundoAtleta.EhBatedorDePenaltis ? "Sim" : "Não")}");
-Console.WriteLine($"Canhoto ou Destros: {(segundoAtleta.CanhatoOuDestro ? "Destro" : "Canhoto")}");
+Console.WriteLine("Vamos cadastrar mebros da comissão Técnica");
 Console.WriteLine("\n-----------------------------\n");
+
+ComissaoTecnica comissaoTecnica = new ComissaoTecnica();    
+Console.WriteLine("Informe o nome do membro da comissão técnica");
+comissaoTecnica.Nome = Console.ReadLine();
+
+Console.WriteLine("Informe o telefone do membro da comissão técnica");
+comissaoTecnica.Telefone = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o endereço do membro da comissão técnica");
+comissaoTecnica.Endereco = Console.ReadLine();
+
+Console.WriteLine("Informe a data de nascimento do membro da comissão técnica (MM/dd/yyyy):");
+comissaoTecnica.DataNascimento = DateTime.Parse(Console.ReadLine());
+
+Console.WriteLine("Informe o cargo do membro da comissão técnica");
+comissaoTecnica.Cargo = Console.ReadLine();
+
+Console.WriteLine("Informe a formação do membro da comissão técnica");
+comissaoTecnica.Formação = Console.ReadLine();
+
+Console.WriteLine("Informe o tempo de experiência do membro da comissão técnica");
+comissaoTecnica.TempoExperiencia = int.Parse(Console.ReadLine());
+
+
+   
+
